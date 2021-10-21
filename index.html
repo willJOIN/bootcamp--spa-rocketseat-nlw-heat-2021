@@ -26,46 +26,54 @@
         </div>
 
         <h1>William Hirano</h1>
-        <a href="https://github.com/willJOIN"
+        <a href="https://github.com/maykbrito" target="_blank"
           ><img src="images/github.svg" alt="Ícone GitHub" /> willJOIN</a
         >
         <p>An instructor focused on helping people start programming for web</p>
 
-        <ul>
-          <li>
+        <ul id="socialLinks">
+          <li class="youtube">
             <a href="https://youtube.com/maykbrito" target="_blank">
               <img src="images/youtube.svg" alt="Ícone Youtube" />
             </a>
           </li>
-          <li>
-            <a href="https://instagram.com/maykbrito" target="_blank">
-              <img
-                src="images/instagram.svg"
-                alt="Ícone Instagram"
-                target="_blank"
-              />
-            </a>
-          </li>
-          <li>
+          <li class="facebook">
             <a href="https://facebook.com/maykbrito" target="_blank">
-              <img
-                src="images/facebook.svg"
-                alt="Ícone Facebook"
-                target="_blank"
-              />
+              <img src="images/facebook.svg" alt="Ícone Facebook" />
             </a>
           </li>
-          <li>
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito" target="_blank">
+              <img src="images/instagram.svg" alt="Ícone Instagram" />
+            </a>
+          </li>
+          <li class="twitter">
             <a href="https://twitter.com/maykbrito" target="_blank">
-              <img
-                src="images/twitter.svg"
-                alt="Ícone Twitter"
-                target="_blank"
-              />
+              <img src="images/twitter.svg" alt="Ícone Twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+    <script>
+      const newSocialLinks = {
+        github: 'willJOIN',
+        youtube: 'willJOIN',
+        facebook: 'willJOIN',
+        instagram: 'willJOIN',
+        twitter: 'willJOIN'
+      }
+      // Change 'maykbrito' to 'willJOIN' in social media links
+      function changeSocialLinks() {
+        // li's of ul
+        for (let li of socialLinks.children) {
+          // Assign each class of each li's to social
+          const social = li.getAttribute('class')
+          // href of children at position 0 (a), template string
+          li.children[0].href = `https://${social}.com/${newSocialLinks[social]}`
+        }
+      }
+      changeSocialLinks()
+    </script>
   </body>
 </html>
