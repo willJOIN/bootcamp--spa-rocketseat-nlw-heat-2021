@@ -1,9 +1,6 @@
 const newSocialLinks = {
   github: 'willJOIN',
-  youtube: 'willJOIN',
-  facebook: 'willJOIN',
-  instagram: 'willJOIN',
-  twitter: 'willJOIN'
+  linkedin: 'whirano',
 }
 
 // Change 'maykbrito' to 'willJOIN' in social media links
@@ -13,7 +10,7 @@ function changeSocialLinks() {
     // Assign each class of each li's to social
     const social = li.getAttribute('class')
     // href of children at position 0 (a), template string
-    li.children[0].href = `https://${social}.com/${newSocialLinks[social]}`
+    li.children[0].href = `https://${social}.com/in/${newSocialLinks[social]}`
   }
 }
 
