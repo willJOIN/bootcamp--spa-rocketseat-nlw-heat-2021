@@ -80,3 +80,7 @@ ul {
   gap: 0.5rem;
   justify-content: center;
 }
+
+ul > li > a > img {
+  width: 40px;
+}
